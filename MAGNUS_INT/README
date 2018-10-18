@@ -1,0 +1,5 @@
+This Dockerfile uses the Docker image made by Mohsin Shaikh from Pawsey
+to create an environment that has anaconda installed along with the proper 
+version of MPI (MPICH/3.2.1) that can be used on Magnus. This Dockerfile 
+adds all the dependencies required to run the orbital integration code 
+written in Python3. 
