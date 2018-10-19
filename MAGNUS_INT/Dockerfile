@@ -5,5 +5,7 @@ FROM mshaikh/anaconda:latest
 # Install all dependencies for integration code 
 RUN pip install rebound 
 RUN pip install reboundx
-RUN pip install matplotlib 
+RUN pip install matplotlib
+RUN pip install astropy 
+ 
 
