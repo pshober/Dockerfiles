@@ -29,5 +29,8 @@ ENV PATH="/software/anaconda/bin:${PATH}"
 
 # Building MPI4PY linked to container's own MPICH3
 RUN env MPICC=/usr/local/bin/mpicc pip install mpi4py
+RUN conda remove matplotlib
+RUN pip install matplotlib==3.0.0
+RUN pip install rebound reboundx
 WORKDIR /
 
