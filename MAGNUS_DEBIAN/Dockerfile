@@ -32,5 +32,8 @@ RUN env MPICC=/usr/local/bin/mpicc pip install mpi4py
 RUN conda remove matplotlib
 RUN pip install matplotlib==3.0.0
 RUN pip install rebound reboundx
-WORKDIR /
+# Looks like we need to update the environment with the location 
+# of shared objects used by Python when loading modules
+ENV LD_LIBRARY_PATH=/software/anaconda/lib/python3.7/site-packages:${LD_LIBRARY_PATH}
 
+WORKDIR /
