@@ -36,4 +36,7 @@ RUN pip install rebound reboundx
 # of shared objects used by Python when loading modules
 ENV LD_LIBRARY_PATH=/software/anaconda/lib/python3.7/site-packages:${LD_LIBRARY_PATH} 
 
-WORKDIR /  
+WORKDIR /
+
+RUN apt-get update 
+RUN apt-get install --yes wget vim build-essential gfortran xauth --fix-missing 
