@@ -36,4 +36,7 @@ RUN pip install rebound reboundx
 # of shared objects used by Python when loading modules
 ENV LD_LIBRARY_PATH=/software/anaconda/lib/python3.7/site-packages:${LD_LIBRARY_PATH}
 
+#fixes ImportError cant find linX11.so.6
+RUN apt-get install --yes wget vim sudo build-essential gfortran xauth 
+
 WORKDIR /
